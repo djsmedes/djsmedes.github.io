@@ -61,6 +61,12 @@ However, people who focus on computer science alone, it turns out, aren't always
 
 So get yourself tech-literate. It's never too late to start, but it will also never be easier than college. If you like it, dive deeper. If not, stop taking the classes -- just don't underestimate the value you've derived from them along the way. You’ll appreciate them when you "get" why a computer system works the way it does, and your colleagues are arguing with IT about "why can't there just be a button that does X?"
 
-# Conclusion
+# A note on the way out
 
-This advice was targeted at myself -- the person I knew 
+This advice was written for an incoming college freshman, and parts of it are specific to that audience, but it's mostly broadly applicable. Nothing revolutionary there, but I feel confident it's pretty good advice:
+
+- Take advantage of the paved paths, but don't be boxed in by them -- think for yourself. 
+- Actually listen to people, and when you do speak, say something real. 
+- Learn how to use a computer. 
+
+Oh, and one last one for 18-year-old me specifically: don't take a 5-credit-hour physics E&M course "just for fun" ya dumb nerd. That's what 3-credit-hour courses are for, and I bet linear algebra would have been way more useful...

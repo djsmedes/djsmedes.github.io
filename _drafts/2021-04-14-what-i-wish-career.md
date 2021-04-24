@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What I wish I could tell my younger self, a decade ago: career advice for incoming college freshmen"
-date: 2021-04-14 23:05:00 -0400
+date: 2021-04-24 16:35:00 -0400
 categories: post introspection advice
 ---
 

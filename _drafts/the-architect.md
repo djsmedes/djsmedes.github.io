@@ -2,7 +2,7 @@
 ## free writing
 ### setup
 - rising star in biochemistry/molecular biology, The Billionaire, comes up with a way to grow buildings using garbage and carbon sequestered from the air
-- combination of insights from fungi (mycelium networks infiltrating garbage & producing chemicals which can break that shit down), plants (growing using air carbon, tall strong structures, integrated solar panels that grow like leaves), embryology (chemical gradients to direct development of previously undifferentiated building blocks - think stem cells). Incorporates metals and polymers into structures as well.
+- combination of insights from fungi (mycelium networks infiltrating garbage & producing chemicals which can break that shit down), plants (growing using air carbon, tall strong structures, integrated solar panels that grow like leaves), embryology (chemical gradients to direct development of previously undifferentiated building blocks - think stem cells). Incorporates metals and polymers into structures as well. Maybe some of these innovations were made by other companies which his company then bought
 - the tech for degrading garbage could apply just as well a) if you're not building a building out of it - could just convert to raw materials or b) to demolish the same structures it builds.
 - both growth and decay are controlled by chemical-gradient apparatus and it's all a tightly controlled secret by The Billionaire and his company
 - legal battles by environmentalist government bodies to force him to turn over the secret so that they can use it to clean up the planet; The Billionaire is fighting this (is he cartoonishly evil and just wants to hoard money and callously doesn't care about the poors of the world? Does he realize the potential for problems if it gets released? Maybe important infrastructure has already been converted and giving access to the decay tech would put it at risk because someone could hit it with an enzyme bomb that would cause the building to just eat itself? 
@@ -33,5 +33,5 @@
 - maintaining traditional structures becomes impossible. rainforests are destroyed too. planet is remade with these things as the dominant form of life. humans basically revert to hunter-gatherers living among them
 ## themes
 - people being shitty, selfish, destructive, corrupted by power, and able to use their wealth to corrupt institutions
-
+- Enriching yourself off the suffering of others vs earning a reward for helping solve one the most important issues of our time
 

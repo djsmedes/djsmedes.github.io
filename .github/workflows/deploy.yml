@@ -27,6 +27,32 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
+      - name: Setup Deno
+        # You may pin to the exact commit or the version.
+        # uses: denoland/setup-deno@e95548e56dfa95d4e1a28d6f422fafe75c4c26fb
+        uses: denoland/setup-deno@v2.0.3
+        with:
+          # The Deno version to install. Can be a semver version of a stable release, "canary" for the latest canary, "lts" for the latest LTS, or the Git hash of a specific canary release.
+          deno-version: "lts" # optional, default is 2.x
+          # File containing the Deno version to install such as .dvmrc or .tool-versions.
+          # deno-version-file: # optional
+          # The name to use for the binary.
+          # deno-binary-name: # optional, default is deno
+          # Cache downloaded modules & packages automatically in GitHub Actions cache.
+          cache: true # optional, default is false
+          # A hash used as part of the cache key, which defaults to a hash of the deno.lock files.
+          # cache-hash: # optional
+
+      # might want linting and testing at some point
+      # - name: Format check
+      #   run: deno fmt --check
+
+      # - name: Lint
+      #   run: deno lint
+
+      # - name: Run tests
+      #   run: deno test --allow-all --lock=deno.lock --lock-write
+
       # Runs a single command using the runners shell
       - name: Generate Astro artifact
         run: deno task build

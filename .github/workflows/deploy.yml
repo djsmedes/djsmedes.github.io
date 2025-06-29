@@ -33,7 +33,7 @@ jobs:
         uses: denoland/setup-deno@v2.0.3
         with:
           # The Deno version to install. Can be a semver version of a stable release, "canary" for the latest canary, "lts" for the latest LTS, or the Git hash of a specific canary release.
-          deno-version: "lts" # optional, default is 2.x
+          deno-version: "2.3" # TODO - at some point figure out how to pin this and local expected version together
           # File containing the Deno version to install such as .dvmrc or .tool-versions.
           # deno-version-file: # optional
           # The name to use for the binary.

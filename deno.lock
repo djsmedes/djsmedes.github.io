@@ -1,6 +1,7 @@
 {
   "version": "5",
   "specifiers": {
+    "npm:astro@5.10.1": "5.10.1_vite@6.3.5__picomatch@4.0.2_zod@3.25.67",
     "npm:astro@^5.10.1": "5.10.1_vite@6.3.5__picomatch@4.0.2_zod@3.25.67"
   },
   "npm": {

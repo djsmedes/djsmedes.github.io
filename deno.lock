@@ -1,7 +1,6 @@
 {
   "version": "5",
   "specifiers": {
-    "npm:@deno/astro-adapter@~0.3.1": "0.3.1_astro@5.10.1__vite@6.3.5___picomatch@4.0.2__zod@3.25.67",
     "npm:astro@^5.10.1": "5.10.1_vite@6.3.5__picomatch@4.0.2_zod@3.25.67"
   },
   "npm": {
@@ -81,12 +80,6 @@
         "blob-to-buffer",
         "cross-fetch",
         "fontkit"
-      ]
-    },
-    "@deno/astro-adapter@0.3.1_astro@5.10.1__vite@6.3.5___picomatch@4.0.2__zod@3.25.67": {
-      "integrity": "sha512-r7/5vz8G4UHK5bA/+GpB64584bTHPqih9eVdJdabMhwfQdbkgjHNjPV0rZzpfDB6WBoGSByTO8Z9Iz+BP8Y1Nw==",
-      "dependencies": [
-        "astro"
       ]
     },
     "@emnapi/runtime@1.4.3": {
@@ -2190,7 +2183,6 @@
   "workspace": {
     "packageJson": {
       "dependencies": [
-        "npm:@deno/astro-adapter@~0.3.1",
         "npm:astro@^5.10.1"
       ]
     }

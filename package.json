@@ -14,5 +14,14 @@
   "devDependencies": {
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "bracketSameLine": false,
+    "useTabs": false,
+    "tabWidth": 2,
+    "plugins": [
+      "prettier-plugin-astro"
+    ]
   }
 }

@@ -6,14 +6,12 @@
 <div id="container">
   <main>
     <section id="hero">
-      <h1>
-        Daniel Smedema
-      </h1>
+      <h1>Daniel Smedema</h1>
       <section id="links">
-        <a class="button" href="https://localhost:4321/TODO">This is a button</a>
-        <a href="https://astro.build/chat"
-          >This is a link that's not a button. An svg could go here.
-        </a>
+        <a class="button" href="https://localhost:4321/TODO"
+          >This is a link button</a
+        >
+        <a href="https://localhost:4321/TODO">This is another link button.</a>
       </section>
     </section>
   </main>
@@ -26,8 +24,8 @@
     >
     <h2>What's New in Astro 5.0?</h2>
     <p>
-      From content layers to server islands, click to learn more about the new features and
-      improvements in Astro 5.0
+      From content layers to server islands, click to learn more about the new
+      features and improvements in Astro 5.0
     </p>
   </a>
 </div>
@@ -44,7 +42,8 @@
   }
 
   #container {
-    font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+    font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
+      Arial, sans-serif;
     height: 100%;
   }
 
@@ -72,7 +71,7 @@
     gap: 16px;
   }
 
-  #links a {
+  #links a.button {
     display: flex;
     align-items: center;
     padding: 10px 12px;
@@ -82,7 +81,7 @@
     background: linear-gradient(to right, white 33%, black 66%);
     background-size: 300% 100%;
     background-position: left;
-    transition: 
+    transition:
       background-position 0.5s ease,
       border-radius 0s ease 0.5s;
   }
@@ -101,7 +100,7 @@
     }
   }
 
-  #links a:hover {
+  #links a.button:hover {
     color: white;
     background-position: right;
     box-shadow:
@@ -113,16 +112,15 @@
       background-position 0.5s ease,
       border-radius 0s ease;
   }
-  
+
   #links a svg {
     height: 1em;
     margin-left: 8px;
   }
 
   pre {
-    font-family:
-      ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono',
-      monospace;
+    font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
+      Consolas, "DejaVu Sans Mono", monospace;
     font-weight: normal;
     background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
     -webkit-background-clip: text;

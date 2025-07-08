@@ -4,7 +4,7 @@ author: 'Daniel'
 # can access frontmatter in .astro files like {importName.frontmatter.title}
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapien
+Lorem ipsum `dolor` sit amet, consectetur adipiscing elit. In sapien
 lectus, scelerisque eu erat vel, egestas imperdiet nisl. Nulla
 vestibulum non metus id tempus. Mauris commodo commodo egestas.
 Vestibulum eu mauris mi. Suspendisse turpis urna, suscipit ac hendrerit

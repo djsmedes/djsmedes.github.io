@@ -22,6 +22,10 @@
 </div>
 
 <style>
+  :root {
+    --button-hover-transition-time: 0.5s;
+  }
+
   #container {
     font-family:
       Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial,
@@ -72,8 +76,8 @@
     background-size: 300% 100%;
     background-position: left;
     transition:
-      background-position 0.5s ease,
-      border-radius 0s ease 0.5s;
+      background-position var(--button-hover-transition-time) ease,
+      border-radius 0s ease var(--button-hover-transition-time);
   }
 
   @keyframes fadeThruMidpoint {
@@ -97,9 +101,9 @@
       inset 0 0 0 1px rgba(255, 255, 255, 0.12),
       inset 0 -2px 0 rgba(0, 0, 0, 0.24);
     border-radius: 10px;
-    animation: fadeThruMidpoint 0.5s forwards;
+    animation: fadeThruMidpoint var(--button-hover-transition-time) forwards;
     transition:
-      background-position 0.5s ease,
+      background-position var(--button-hover-transition-time) ease,
       border-radius 0s ease;
   }
 

@@ -3,27 +3,16 @@ import dan_daisy from "../assets/dan-daisy-cropped.jpg";
 import * as aboutText from "../content/about.md";
 ---
 
-<main>
-  <section id="text-content">
-    <h1>About</h1>
-    <aboutText.Content />
-    <img id="hero-img" src={dan_daisy.src} alt="A man holding a puppy" />
-  </section>
-</main>
+<div id="about">
+  <h1>About</h1>
+  <aboutText.Content />
+  <img id="hero-img" src={dan_daisy.src} alt="A man holding a puppy" />
+</div>
 
 <style>
-  main {
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr minmax(0, 750px) 1fr;
-    background-color: darkgray;
-  }
-
-  #text-content {
-    grid-column: 2;
+  #about {
     padding: 3rem 5rem;
     background-color: lightgrey;
-    /* */
     display: flex;
     flex-direction: column;
   }

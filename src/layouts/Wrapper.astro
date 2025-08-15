@@ -1,9 +1,11 @@
 <div id="wrapper">
   <header>
-    <nav>
-      <a href="/" class="monospaced">Home</a>
-      <a href="/about" class="monospaced">About</a>
-    </nav>
+    <div id="header-content">
+      <h1 id="title">Daniel Smedema</h1>
+      <nav>
+        <a href="/" class="monospaced">About</a>
+      </nav>
+    </div>
   </header>
   <main>
     <slot />
@@ -37,6 +39,10 @@
     grid-template-columns: 1fr var(--center-column-width) 1fr;
   }
 
+  header * {
+    color: white;
+  }
+
   main {
     background-color: lightgrey;
   }
@@ -49,13 +55,19 @@
     grid-area: footer;
   }
 
+  #header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
   header nav {
     height: 100%;
     display: flex;
     align-items: center;
   }
 
-  header nav,
+  #header-content,
   main,
   #footer-content {
     grid-column: 2 / 3;
@@ -63,7 +75,6 @@
 
   nav a {
     text-decoration: none;
-    color: white;
     padding: 10px 12px;
     background: linear-gradient(to bottom, black 33%, blue 66%);
     background-size: 100% 300%;

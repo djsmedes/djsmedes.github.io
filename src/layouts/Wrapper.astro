@@ -1,3 +1,8 @@
+---
+import linkedIn from "../assets/InBug-Black.png";
+import github from "../assets/github-mark.svg";
+---
+
 <div id="wrapper">
   <header>
     <div id="header-content">
@@ -11,7 +16,14 @@
     <slot />
   </main>
   <footer>
-    <div id="footer-content"></div>
+    <div id="footer-content">
+      <a href="https://www.linkedin.com/in/daniel-smedema/">
+        <img id="linkedin" src={linkedIn.src} alt="A LinkedIn logo" />
+      </a>
+      <a href="https://github.com/djsmedes/">
+        <img id="github" src={github.src} alt="A GitHub logo" />
+      </a>
+    </div>
   </footer>
 </div>
 
@@ -28,7 +40,7 @@
       "header header header"
       "main main main"
       "footer footer footer";
-    grid-template-rows: 3rem 1fr 3rem;
+    grid-template-rows: 3rem 1fr 5rem;
     grid-template-columns: 1fr var(--center-column-width) 1fr;
   }
 
@@ -73,6 +85,13 @@
     grid-column: 2 / 3;
   }
 
+  #footer-content {
+    display: flex;
+    padding-left: 24px;
+    align-items: center;
+    gap: 1rem;
+  }
+
   nav a {
     text-decoration: none;
     padding: 10px 12px;
@@ -84,5 +103,14 @@
 
   nav a:hover {
     background-position: bottom;
+  }
+
+  #linkedin {
+    height: 2rem;
+    filter: invert(1);
+  }
+
+  #github {
+    height: 2rem;
   }
 </style>

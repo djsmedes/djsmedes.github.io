@@ -32,6 +32,12 @@ import github from "../assets/github-mark.svg";
     --center-column-width: minmax(0, 750px);
   }
 
+  html,
+  body {
+    background-color: black; /* or darkgray to match */
+    margin: 0;
+  }
+
   #wrapper {
     background-color: darkgray;
     min-height: 100vh;
@@ -92,7 +98,8 @@ import github from "../assets/github-mark.svg";
     gap: 1rem;
   }
 
-  nav a {
+  #header-content a,
+  #footer-content a {
     text-decoration: none;
     padding: 10px 12px;
     background: linear-gradient(to bottom, black 33%, blue 66%);
@@ -101,7 +108,8 @@ import github from "../assets/github-mark.svg";
     transition: background-position 0.3s ease;
   }
 
-  nav a:hover {
+  #header-content a:hover,
+  #footer-content a:hover {
     background-position: bottom;
   }
 

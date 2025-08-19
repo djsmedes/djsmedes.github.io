@@ -1,0 +1,13 @@
+{
+  "deno.enable": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[json]": {
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[astro]": {
+    "editor.formatOnSave": true
+  },
+}

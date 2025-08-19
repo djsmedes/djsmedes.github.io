@@ -1,7 +1,10 @@
 {
   "version": "5",
   "specifiers": {
-    "npm:astro@^5.10.1": "5.10.1_vite@6.3.5__picomatch@4.0.2_zod@3.25.67"
+    "npm:astro@5.10.1": "5.10.1_vite@6.3.5__picomatch@4.0.2_zod@3.25.67",
+    "npm:astro@^5.10.1": "5.10.1_vite@6.3.5__picomatch@4.0.2_zod@3.25.67",
+    "npm:prettier-plugin-astro@~0.14.1": "0.14.1",
+    "npm:prettier@^3.6.2": "3.6.2"
   },
   "npm": {
     "@astrojs/compiler@2.12.2": {
@@ -1629,6 +1632,18 @@
         "source-map-js"
       ]
     },
+    "prettier-plugin-astro@0.14.1": {
+      "integrity": "sha512-RiBETaaP9veVstE4vUwSIcdATj6dKmXljouXc/DDNwBSPTp8FRkLGDSGFClKsAFeeg+13SB0Z1JZvbD76bigJw==",
+      "dependencies": [
+        "@astrojs/compiler",
+        "prettier",
+        "sass-formatter"
+      ]
+    },
+    "prettier@3.6.2": {
+      "integrity": "sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==",
+      "bin": true
+    },
     "prismjs@1.30.0": {
       "integrity": "sha512-DEvV2ZF2r2/63V+tK8hQvrR2ZGn10srHbXviTlcv7Kpzw8jWiNTqbVgjO3IY8RxrrOUF8VPMQQFysYYYv0YZxw=="
     },
@@ -1812,6 +1827,15 @@
       ],
       "bin": true
     },
+    "s.color@0.0.15": {
+      "integrity": "sha512-AUNrbEUHeKY8XsYr/DYpl+qk5+aM+DChopnWOPEzn8YKzOhv4l2zH6LzZms3tOZP3wwdOyc0RmTciyi46HLIuA=="
+    },
+    "sass-formatter@0.7.9": {
+      "integrity": "sha512-CWZ8XiSim+fJVG0cFLStwDvft1VI7uvXdCNJYXhDvowiv+DsbD1nXLiQ4zrE5UBvj5DWZJ93cwN0NX5PMsr1Pw==",
+      "dependencies": [
+        "suf-log"
+      ]
+    },
     "semver@7.7.2": {
       "integrity": "sha512-RF0Fw+rO5AMf9MAyaRXI4AV0Ulj5lMHqVxxdSgiVbixSCXoEmmX/jk0CuJw4+3SqroYO9VoUh+HcuJivvtJemA==",
       "bin": true
@@ -1910,6 +1934,12 @@
       "integrity": "sha512-iq6eVVI64nQQTRYq2KtEg2d2uU7LElhTJwsH4YzIHZshxlgZms/wIc4VoDQTlG/IvVIrBKG06CrZnp0qv7hkcQ==",
       "dependencies": [
         "ansi-regex@6.1.0"
+      ]
+    },
+    "suf-log@2.5.3": {
+      "integrity": "sha512-KvC8OPjzdNOe+xQ4XWJV2whQA0aM1kGVczMQ8+dStAO6KfEB140JEVQ9dE76ONZ0/Ylf67ni4tILPJB41U0eow==",
+      "dependencies": [
+        "s.color"
       ]
     },
     "tiny-inflate@1.0.3": {
@@ -2183,7 +2213,9 @@
   "workspace": {
     "packageJson": {
       "dependencies": [
-        "npm:astro@^5.10.1"
+        "npm:astro@^5.10.1",
+        "npm:prettier-plugin-astro@~0.14.1",
+        "npm:prettier@^3.6.2"
       ]
     }
   }

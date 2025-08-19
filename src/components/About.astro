@@ -1,0 +1,24 @@
+---
+import dan_daisy from "../assets/dan-daisy-cropped.jpg";
+import * as aboutText from "../content/about.md";
+---
+
+<div id="about">
+  <h1>About</h1>
+  <aboutText.Content />
+  <img id="hero-img" src={dan_daisy.src} alt="A man holding a puppy" />
+</div>
+
+<style>
+  #about {
+    padding: 3rem 5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #hero-img {
+    max-width: 300px;
+    margin-top: 3rem;
+    align-self: center;
+  }
+</style>

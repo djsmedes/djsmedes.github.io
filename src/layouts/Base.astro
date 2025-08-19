@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Daniel Smedema | My personal website</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family:
+      Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial,
+      sans-serif;
+  }
+
+  .monospaced {
+    font-family:
+      ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
+      "DejaVu Sans Mono", monospace;
+    font-weight: 400;
+  }
+
+  code {
+    font-family:
+      ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
+      "DejaVu Sans Mono", monospace;
+    font-weight: 400;
+    background: darkslateblue;
+    color: greenyellow;
+    padding: 0.2rem;
+    border-radius: 0.25rem;
+  }
+
+  h1 {
+    font-size: 22px;
+    margin-top: 0.25rem;
+  }
+
+  h2 {
+    margin: 0 0 1rem;
+    font-weight: normal;
+    color: #111827;
+    font-size: 20px;
+  }
+
+  p {
+    color: #4b5563;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.006em;
+  }
+</style>

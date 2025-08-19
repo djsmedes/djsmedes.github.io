@@ -1,0 +1,124 @@
+---
+import linkedIn from "../assets/InBug-Black.png";
+import github from "../assets/github-mark.svg";
+---
+
+<div id="wrapper">
+  <header>
+    <div id="header-content">
+      <h1 id="title">Daniel Smedema</h1>
+      <nav>
+        <a href="/" class="monospaced">About</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <slot />
+  </main>
+  <footer>
+    <div id="footer-content">
+      <a href="https://www.linkedin.com/in/daniel-smedema/">
+        <img id="linkedin" src={linkedIn.src} alt="A LinkedIn logo" />
+      </a>
+      <a href="https://github.com/djsmedes/">
+        <img id="github" src={github.src} alt="A GitHub logo" />
+      </a>
+    </div>
+  </footer>
+</div>
+
+<style>
+  :root {
+    --center-column-width: minmax(0, 750px);
+  }
+
+  html,
+  body {
+    background-color: black; /* or darkgray to match */
+    margin: 0;
+  }
+
+  #wrapper {
+    background-color: darkgray;
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "main main main"
+      "footer footer footer";
+    grid-template-rows: 3rem 1fr 5rem;
+    grid-template-columns: 1fr var(--center-column-width) 1fr;
+  }
+
+  header,
+  footer {
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr var(--center-column-width) 1fr;
+  }
+
+  header * {
+    color: white;
+  }
+
+  main {
+    background-color: lightgrey;
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+
+  #header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  header nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  #header-content,
+  main,
+  #footer-content {
+    grid-column: 2 / 3;
+  }
+
+  #footer-content {
+    display: flex;
+    padding-left: 24px;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  #header-content a,
+  #footer-content a {
+    text-decoration: none;
+    padding: 10px 12px;
+    background: linear-gradient(to bottom, black 33%, blue 66%);
+    background-size: 100% 300%;
+    background-position: top;
+    transition: background-position 0.3s ease;
+  }
+
+  #header-content a:hover,
+  #footer-content a:hover {
+    background-position: bottom;
+  }
+
+  #linkedin {
+    height: 2rem;
+    filter: invert(1);
+  }
+
+  #github {
+    height: 2rem;
+  }
+</style>

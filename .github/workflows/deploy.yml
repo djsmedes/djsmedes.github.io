@@ -17,8 +17,8 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  build_and_deploy:
-    if: ${{ github.event.pull_request.draft == false }}
+  build:
+    if: ${{ github.event.pull_request.draft == false || github.event_name == 'push' }}
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -27,15 +27,43 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
+      - name: Setup Deno
+        # You may pin to the exact commit or the version.
+        # uses: denoland/setup-deno@e95548e56dfa95d4e1a28d6f422fafe75c4c26fb
+        uses: denoland/setup-deno@v2.0.3
+        with:
+          # The Deno version to install. Can be a semver version of a stable release, "canary" for the latest canary, "lts" for the latest LTS, or the Git hash of a specific canary release.
+          deno-version: "2.3" # TODO - at some point figure out how to pin this and local expected version together
+          # File containing the Deno version to install such as .dvmrc or .tool-versions.
+          # deno-version-file: # optional
+          # The name to use for the binary.
+          # deno-binary-name: # optional, default is deno
+          # Cache downloaded modules & packages automatically in GitHub Actions cache.
+          cache: true # optional, default is false
+          # A hash used as part of the cache key, which defaults to a hash of the deno.lock files.
+          # cache-hash: # optional
+
+      # might want linting and testing at some point
+      # - name: Format check
+      #   run: deno fmt --check
+
+      # - name: Lint
+      #   run: deno lint
+
+      # - name: Run tests
+      #   run: deno test --allow-all --lock=deno.lock --lock-write
+
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: Generate Astro artifact
+        # TODO - seems like the below should work, not need the special deno run -A npm: thing
+        run: deno task build
+        # run: deno run -A npm:astro@latest build
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      # - name: Run a multi-line script
+      #   run: |
+      #     echo Add other actions to build,
+      #     echo test, and deploy your project.
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3.0.1
@@ -43,10 +71,16 @@ jobs:
           # Artifact name
           name: github-pages # default
           # Path of the directory containing the static assets.
-          path: _site/ # default is _site/
+          path: dist/ # default is _site/
           # Duration after which artifact will expire in days.
           # retention-days: # optional, default is 1
 
+  deploy:
+    needs: build
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy GitHub Pages site
         uses: actions/deploy-pages@v4.0.5
         with:
